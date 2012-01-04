@@ -365,7 +365,7 @@
     },
     {
       "Datasource": {
-        "table": "( select way,highway from planet_osm_line \n  where highway in\n  ( 'motorway', 'motorway_link', 'trunk', 'trunk_link', \n    'primary', 'primary_link', 'secondary', 'secondary_link',\n    'tertiary', 'tertiary_link', 'residential', 'unclassified','cycleway' )\n  and tunnel in ( 'yes', 'true', '1' )\n  order by z_order ) as roads",
+        "table": "( select way,highway from planet_osm_line \n  where highway in\n  ( 'motorway', 'motorway_link', 'trunk', 'trunk_link', \n    'primary', 'primary_link', 'secondary', 'secondary_link',\n    'tertiary', 'tertiary_link', 'residential', 'unclassified','cycleway', 'footway' )\n  and tunnel in ( 'yes', 'true', '1' )\n  order by z_order ) as roads",
         "key_field": "",
         "geometry_field": "way",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -384,7 +384,7 @@
     },
     {
       "Datasource": {
-        "table": "( select way,highway,aeroway,\n    case when tunnel in ( 'yes', 'true', '1' ) then 'yes'::text\n      else 'no'::text end as tunnel,\n    case when service in ( 'parking_aisle',\n      'drive-through','driveway' ) then 'INT-minor'::text\n      else service end as service\n  from planet_osm_line\n  where highway in ( 'motorway', 'motorway_link',\n    'trunk', 'trunk_link', 'primary', 'primary_link',\n    'secondary', 'secondary_link', 'tertiary', 'tertiary_link', \n    'residential', 'unclassified', 'road', 'service',\n    'pedestrian', 'raceway', 'living_street','cycleway' )\n  OR \"aeroway\" IN ('apron','runway','taxiway')\n  order by z_order) as route",
+        "table": "( select way,highway,aeroway,\n    case when tunnel in ( 'yes', 'true', '1' ) then 'yes'::text\n      else 'no'::text end as tunnel,\n    case when service in ( 'parking_aisle',\n      'drive-through','driveway' ) then 'INT-minor'::text\n      else service end as service\n  from planet_osm_line\n  where highway in ( 'motorway', 'motorway_link',\n    'trunk', 'trunk_link', 'primary', 'primary_link',\n    'secondary', 'secondary_link', 'tertiary', 'tertiary_link', \n    'residential', 'unclassified', 'road', 'service',\n    'pedestrian', 'raceway', 'living_street','cycleway', 'footway')\n  OR \"aeroway\" IN ('apron','runway','taxiway')\n  order by z_order) as route",
         "key_field": "",
         "geometry_field": "way",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
