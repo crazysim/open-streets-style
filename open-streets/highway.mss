@@ -15,6 +15,7 @@
 @track:         @road_line;
 @footway:       #6B9;
 @cycleway:      #69B;
+@steps:         @footway;
 @bridge:        rgba(64,64,64,0.66);
 @rail:          #999;
 
@@ -75,6 +76,23 @@
 }
 .route.fill[highway='footway'] {
   [zoom>15]{ line-color:@footway; line-cap:square; line-join:round; }
+  [zoom=16]{ line-width:1.6; }
+  [zoom=17]{ line-width:4; }
+  [zoom>17]{ line-width:7; }
+}
+
+/* Steps */
+.route.line[highway='steps'] {
+  [zoom>12]{ line-color:@steps; line-cap:square; line-join:round; }
+  [zoom=13]{ line-width:0.2; line-opacity:0.4; }
+  [zoom=14]{ line-width:0.4; line-opacity:0.6; }
+  [zoom=15]{ line-width:1; line-opacity:0.8; }
+  [zoom=16]{ line-width:1.6 + 2; }
+  [zoom=17]{ line-width:4 + 2; }
+  [zoom>17]{ line-width:7 + 3; }
+}
+.route.fill[highway='footway'] {
+  [zoom>15]{ line-color:@steps; line-cap:square; line-join:round; }
   [zoom=16]{ line-width:1.6; }
   [zoom=17]{ line-width:4; }
   [zoom>17]{ line-width:7; }
