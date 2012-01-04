@@ -83,6 +83,7 @@
 
 /* Steps */
 .route.line[highway='steps'] {
+  line-dasharray: 1,10;
   [zoom>12]{ line-color:@steps; line-cap:square; line-join:round; }
   [zoom=13]{ line-width:0.2; line-opacity:0.4; }
   [zoom=14]{ line-width:0.4; line-opacity:0.6; }
