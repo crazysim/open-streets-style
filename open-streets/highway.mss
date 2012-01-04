@@ -21,6 +21,23 @@
 /* ---- ROADS ---- */
 
 /* Service/Access */
+.route.line[highway='cycleway'] {
+  [zoom>12]{ line-color:@cycleway; line-cap:square; line-join:round; }
+  [zoom=13]{ line-width:0.2; line-opacity:0.4; }
+  [zoom=14]{ line-width:0.4; line-opacity:0.6; }
+  [zoom=15]{ line-width:1; line-opacity:0.8; }
+  [zoom=16]{ line-width:1.6 + 2; }
+  [zoom=17]{ line-width:4 + 2; }
+  [zoom>17]{ line-width:7 + 3; }
+}
+.route.fill[highway='cycleway'] {
+  [zoom>15]{ line-color:@cycleway; line-cap:square; line-join:round; }
+  [zoom=16]{ line-width:1.6; }
+  [zoom=17]{ line-width:4; }
+  [zoom>17]{ line-width:7; }
+}
+
+/* Service/Access */
 .route.line[highway='service'] {
   [zoom>12]{ line-color:@access_line; line-cap:square; line-join:round; }
   [zoom=13]{ line-width:0.2; line-opacity:0.4; }

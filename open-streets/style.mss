@@ -49,14 +49,14 @@ Map { background-color: @water; }
   [zoom=16] { line-width:1.8; }
   [zoom>16] { line-width:2; }
 }
-
+/*
 .wetland[zoom>10] {
   polygon-pattern-file:url(../project/open-streets/res/wetland-8.png);
   [zoom>13] { polygon-pattern-file:url(../project/open-streets/res/wetland-16.png); }
   [zoom>15] { polygon-pattern-file:url(../project/open-streets/res/wetland-32.png); }
   polygon-pattern-alignment: global;
 }
-
+*/
 .forest[zoom>6][size='huge'],
 .forest[zoom>7][size='large'],
 .forest[zoom>8][size='medium'],
@@ -120,10 +120,10 @@ Map { background-color: @water; }
    *campus*, but are occasionally applied to the physical building instead. */
 @campus: #ECF;
 .campus[zoom>10] {
-  polygon-opacity:0.2;
+  polygon-opacity:0.0;
   polygon-fill:@campus;
   [zoom>12] {
-    line-opacity:0.4;
+    line-opacity:0.2;
     line-color:spin(darken(@campus,20),20);
   }
   [zoom=13] { line-width:0.3; }
@@ -155,5 +155,5 @@ Map { background-color: @water; }
 .building[zoom>=17] {
   building-fill:lighten(@building,4);
   building-fill-opacity: 0.8;
-  building-height:1.2;
+  building-height: 5.0;
 }
