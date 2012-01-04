@@ -12,7 +12,7 @@
 @road_line:     #bbb;
 @access_fill:   @road_fill;
 @access_line:   @road_line;
-@track:         @road;
+@track:         @road_line;
 @footway:       #6B9;
 @cycleway:      #69B;
 @bridge:        rgba(64,64,64,0.66);
