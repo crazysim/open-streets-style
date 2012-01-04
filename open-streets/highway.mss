@@ -20,7 +20,16 @@
 
 /* ---- ROADS ---- */
 
-/* Cycleways */
+/* ---- Pedestian Areas ---- */
+.pedestrian[zoom>13] {
+  polygon-fill:lighten(@footway,3);
+  line-color:darken(@footway,6);
+  [zoom=14] { line-width:0.4; }
+  [zoom=15] { line-width:0.6; }
+  [zoom>15] { line-width:0.8; }
+}
+
+/* Footways */
 .route.line[highway='footway'] {
   [zoom>12]{ line-color:@footway; line-cap:square; line-join:round; }
   [zoom=13]{ line-width:0.2; line-opacity:0.4; }
