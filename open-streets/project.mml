@@ -703,7 +703,8 @@
       "srs": ""
     }
   ],
-  "description": "",
+  "description": "Just a base for photoshopping or mspaint usage.",
   "attribution": "",
-  "legend": ""
+  "legend": "",
+  "name": "UCSB No-Labels Map"
 }
