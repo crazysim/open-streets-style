@@ -1,4 +1,5 @@
 @font_reg: "Ubuntu Regular","Arial Regular","DejaVu Sans Book";
+@road_text_opacity: 0;
 
 /* ---- PLACENAMES ---- */
 
@@ -9,6 +10,7 @@
   text-fill:#555;
   text-halo-fill:#fff;
   text-halo-radius:2;
+  text-opacity: @road_text_opacity;
   [zoom=7] { text-size:10; text-halo-radius:1; }
   [zoom=8] { text-size:10; text-halo-radius:1; }
   [zoom=9] { text-size:11; }
@@ -27,6 +29,7 @@
   text-fill:#555;
   text-halo-fill:#fff;
   text-halo-radius:2;
+  text-opacity: @road_text_opacity;
   [zoom=8] { text-size:10; text-halo-radius:1; }
   [zoom=9] { text-size:10; text-halo-radius:1; }
   [zoom=10] { text-size:10; text-halo-radius:1; }
@@ -45,6 +48,7 @@
   text-halo-radius:1;
   text-placement:line;
   text-name:"''";
+  text-opacity: @road_text_opacity;
   [highway='motorway'][zoom>=12] {
     text-name:"[name]";
     text-fill:spin(darken(@motorway_fill,70),-15);
