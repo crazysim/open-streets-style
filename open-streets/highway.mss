@@ -29,7 +29,7 @@
   [zoom>15] { line-width:0.8; }
 }
 
-/* Footways */
+/* Track */
 .route.line[highway='track'] {
   [zoom>12]{ line-color:@track; line-cap:square; line-join:round; }
   [zoom=13]{ line-width:0.2; line-opacity:0.4; }
