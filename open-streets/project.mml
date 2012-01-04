@@ -6,8 +6,8 @@
     34.4343
   ],
   "center": [
-    -119.84879743435357,
-    34.41462905814581,
+    -119.85009562351676,
+    34.41286769865276,
     17
   ],
   "format": "png",
@@ -444,16 +444,16 @@
     },
     {
       "Datasource": {
-        "dbname": "osm",
-        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "table": "( SELECT way,building,aeroway,name\nFROM planet_osm_polygon\nWHERE (\"building\" IS NOT NULL\nAND \"building\" != 'no')\nOR \"aeroway\" IN ('terminal')\nORDER BY z_order asc ) AS building",
+        "key_field": "",
         "geometry_field": "way",
-        "host": "",
-        "password": "",
-        "port": "",
-        "srid": 900913,
-        "table": "( SELECT way,building,aeroway\nFROM planet_osm_polygon\nWHERE (\"building\" IS NOT NULL\nAND \"building\" != 'no')\nOR \"aeroway\" IN ('terminal')\nORDER BY z_order asc ) AS building",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "type": "postgis",
-        "user": ""
+        "srid": "900913",
+        "dbname": "osm",
+        "id": "building",
+        "project": "open-streets",
+        "srs": null
       },
       "class": "building",
       "geometry": "polygon",
