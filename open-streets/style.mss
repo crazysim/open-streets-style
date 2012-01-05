@@ -157,3 +157,7 @@ Map { background-color: @water; }
   building-fill-opacity: 0.8;
   building-height: 5.0;
 }
+
+.building[name = "Tower"] {
+  building-height: 40.0;
+}
