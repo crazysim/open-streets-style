@@ -158,7 +158,9 @@ Map { background-color: @water; }
   building-height: 5.0;
 }
 
+/*
 .building[name = "San Nicolas Hall"],
 .building[name = "San Miguel Hall"] {
   building-height: 40.0;
 }
+*/
