@@ -13,8 +13,8 @@
 @access_fill:   @road_fill;
 @access_line:   @road_line;
 @track:         @road_line;
-@footway:       #6B9;
-@cycleway:      #69B;
+@footway:       lighten(#6B9,25);
+@cycleway:      lighten(#69B,25);
 @steps:         @footway;
 @bridge:        rgba(64,64,64,0.66);
 @rail:          #999;
